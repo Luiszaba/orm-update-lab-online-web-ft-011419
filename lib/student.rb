@@ -48,11 +48,7 @@ else
 end
 end
 
-#def self.create(classmate)
-  classmate = Student.new(name, grade)
-  classmate.save
-  classmate
-#end
+
 
 end
 
