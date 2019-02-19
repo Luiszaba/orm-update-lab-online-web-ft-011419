@@ -9,7 +9,7 @@ class Student
 def initialize(id = nil, name, grade)
   @name = name
   @grade = grade
-  @id = id
+  @id = db
 end
 
   # Remember, you can access your database connection anywhere in this class
@@ -17,7 +17,7 @@ end
 
 def self.create_table
   sql = <<-SQL
-    CREATE TABLE IF NOT EXISTS students (
+    CREATE TABLE IF NOT EXISTS student (
     id INTEGER PRIMARY KEY,
     name TEXT,
     grade INTEGER
