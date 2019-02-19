@@ -45,12 +45,18 @@ def save
 end
 end
 
-def self.create(name:, grade:)
+def self.create(name, grade)
   student = Student.new(name, grade)
   student.save
   student
 end
 
+def new_from_db
+  id = [0]
+  name = [1]
+  grade =[2]
+end
+end
 
 
 end
