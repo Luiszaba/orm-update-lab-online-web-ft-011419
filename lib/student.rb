@@ -9,7 +9,7 @@ class Student
 def initialize(id = nil, name, grade)
   @name = name
   @grade = grade
-  @id = db
+  @id = id
 end
 
   # Remember, you can access your database connection anywhere in this class
@@ -17,7 +17,7 @@ end
 
 def self.create_table
   sql = <<-SQL
-    CREATE TABLE IF NOT EXISTS student (
+    CREATE TABLE IF NOT EXISTS students (
     id INTEGER PRIMARY KEY,
     name TEXT,
     grade INTEGER
@@ -44,15 +44,15 @@ else
   SQL
   
   DB[:conn].execute(sql, self.name, self.grade)
-  @id = DB[:conn].execute("SELECT last_insert_rowid() FROM student")[0][0]
+  @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
 end
 end
 
-def self.create(classmate)
+#def self.create(classmate)
   classmate = Student.new(name, grade)
   classmate.save
   classmate
-end
+#end
 
 end
 
