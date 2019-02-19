@@ -50,7 +50,8 @@ else
   VALUES (?,?)
   SQL
   DB[:conn].execute(sql, self.name, self.grade)
-  @id = DB[:conn]("SELECT insert_")
+  @id = DB[:conn]("SELECT last_insert_rowid() FROM students")[0][0]
+end
 
 end
 
