@@ -48,10 +48,11 @@ end
 def self.create(student)
   student = Student.new(name, grade)
   student.save
+  student
 end
 
-#def self.new_from_db
-  #sql = <<-SQL
+def self.new_from_db
+  sql = <<-SQL
   
 
 end
