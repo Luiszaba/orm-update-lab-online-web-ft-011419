@@ -68,7 +68,8 @@ end
 
 
 def update
-  
+  sql = <<-SQL
+  UPDATE students SET name
 end
 
 
