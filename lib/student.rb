@@ -50,10 +50,10 @@ def self.create(student)
   student.save
 end
 
-def self.new_from_db
-  sql = <<-SQL
+#def self.new_from_db
+  #sql = <<-SQL
   
 
 end
-
+end
 
