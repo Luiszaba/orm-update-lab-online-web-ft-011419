@@ -51,12 +51,11 @@ def self.create(name, grade)
   student
 end
 
-def self.new_from_db
+def self.new_from_db(id, name, grade)
   id = [0]
   name = [1]
   grade =[2]
  self.new(id, name, grade) 
-  
 end
 end
 
