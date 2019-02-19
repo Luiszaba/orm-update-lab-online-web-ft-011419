@@ -49,8 +49,8 @@ else
   INSERT INTO students 
   VALUES (?,?)
   SQL
-  DB[:conn].execute(self.name, self.grade)
-  
+  DB[:conn].execute(sql, self.name, self.grade)
+  @id = DB[:conn]("SELECT insert_")
 
 end
 
