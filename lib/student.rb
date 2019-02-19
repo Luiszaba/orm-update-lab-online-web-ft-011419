@@ -51,7 +51,7 @@ def self.create(name, grade)
   student
 end
 
-def new_from_db
+def self.new_from_db
   id = [0]
   name = [1]
   grade =[2]
