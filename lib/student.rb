@@ -34,13 +34,11 @@ def self.drop_table
 end
 
 def save
-  
-if self.id
-  self.update
-else
+  if self.id
+    self.update
+  else
   sql = <<-SQL
-  INSERT INTO students 
-  VALUES (?, ?)
+  INSERT INTO students VALUES (?, ?)
   SQL
   
   DB[:conn].execute(sql, self.name, self.grade)
