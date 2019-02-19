@@ -45,13 +45,14 @@ def save
 end
 end
 
-def self.create(classmate)
-  classmate = Student.new(name, grade)
-  classmate.save
-  classmate
+def self.create(student)
+  student = Student.new(name, grade)
+  student.save
 end
 
-
+def self.new_from_db
+  sql = <<-SQL
+  
 
 end
 
