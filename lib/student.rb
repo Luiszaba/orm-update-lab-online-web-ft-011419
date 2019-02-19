@@ -45,7 +45,7 @@ def save
 end
 end
 
-def self.create(student)
+def self.create(name:, album:)
   student = Student.new(name, grade)
   student.save
   student
