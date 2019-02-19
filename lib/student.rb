@@ -59,7 +59,9 @@ def self.new_from_db(row)
 end
 
 def self.find_by_name(name)
-  
+  sql =<<-SQL
+  SELECT * WHERE name = ?
+  SQL
   
 
 
